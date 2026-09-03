@@ -1,0 +1,43 @@
+:root {
+  /* color */
+  --background: #f4f0e8;
+  --surface: #ffffff;
+  --surface-secondary: #ede7da;
+  --text-primary: #241814;
+  --text-secondary: #6b5f55;
+  --accent: #8c2b47;
+  --accent-secondary: #1e6e68;
+  --border: #ddd3c2;
+  --success: #2f7d5c;
+  --danger: #a6402f;
+
+  /* type */
+  --font-display: "Rethink Sans", system-ui, sans-serif;
+  --font-body: "Aptos", system-ui, sans-serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.875rem;
+
+  /* space */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  /* shape */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 1px 2px rgba(36, 24, 20, 0.06);
+  --shadow-md: 0 4px 16px rgba(36, 24, 20, 0.08);
+
+  /* layout */
+  --nav-height: 76px;
+  --content-max-width: 480px;
+}

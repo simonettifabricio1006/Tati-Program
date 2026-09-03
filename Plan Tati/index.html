@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Plan de entrenamiento</title>
+  <link rel="stylesheet" href="fonts/fonts.css" />
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-header__title">Hola Margarita</h1>
+  </header>
+
+  <main class="app-main">
+    <section id="section-entrenamiento" class="app-section" aria-labelledby="tab-entrenamiento"></section>
+    <section id="section-progression" class="app-section" hidden aria-labelledby="tab-progression"></section>
+    <section id="section-notas" class="app-section" hidden aria-labelledby="tab-notas"></section>
+    <section id="section-nutricion" class="app-section" hidden aria-labelledby="tab-nutricion"></section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Navegación principal">
+    <button id="tab-entrenamiento" class="bottom-nav__item" data-section="entrenamiento" aria-current="page">
+      <span class="bottom-nav__icon" aria-hidden="true">🏋️</span>
+      <span class="bottom-nav__label">Entrenamiento</span>
+    </button>
+    <button id="tab-progression" class="bottom-nav__item" data-section="progression">
+      <span class="bottom-nav__icon" aria-hidden="true">📈</span>
+      <span class="bottom-nav__label">Progression</span>
+    </button>
+    <button id="tab-notas" class="bottom-nav__item" data-section="notas">
+      <span class="bottom-nav__icon" aria-hidden="true">📝</span>
+      <span class="bottom-nav__label">Notas</span>
+    </button>
+    <button id="tab-nutricion" class="bottom-nav__item" data-section="nutricion">
+      <span class="bottom-nav__icon" aria-hidden="true">🍽️</span>
+      <span class="bottom-nav__label">Nutrición</span>
+    </button>
+  </nav>
+
+  <div id="sheet-root"></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

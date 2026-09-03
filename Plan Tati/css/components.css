@@ -1,0 +1,600 @@
+/* ---- botones ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: 0 var(--space-5);
+  border-radius: var(--radius-md);
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: var(--text-base);
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.15s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+.btn--secondary {
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+}
+
+.btn--full {
+  width: 100%;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---- tarjetas ---- */
+.card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---- tarjeta "Hoy" ---- */
+.today-card {
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.today-card__eyebrow {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.today-card__day {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+}
+
+.today-card__meta {
+  font-size: var(--text-sm);
+  opacity: 0.9;
+}
+
+.today-card .btn--primary {
+  background: #fff;
+  color: var(--accent);
+  margin-top: var(--space-2);
+}
+
+.today-card.is-done {
+  background: var(--success);
+}
+
+.today-card.is-neutral {
+  background: var(--surface-secondary);
+  color: var(--text-primary);
+}
+
+/* ---- tarjeta de etapa ---- */
+.stage-card {
+  background: var(--accent-secondary);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.stage-card__name {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.stage-card__meta {
+  font-size: var(--text-sm);
+  opacity: 0.9;
+}
+
+.stage-card.is-open {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* ---- chips de semana ---- */
+.week-chips {
+  display: flex;
+  gap: var(--space-2);
+  overflow-x: auto;
+  padding-bottom: var(--space-1);
+}
+
+.week-chip {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.week-chip.is-active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---- acordeón de día ---- */
+.day-accordion {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.day-accordion__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  min-height: 64px;
+}
+
+.day-accordion__badge {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.day-accordion.is-done .day-accordion__badge {
+  background: var(--success);
+  color: #fff;
+}
+
+.day-accordion__title {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.day-accordion__day {
+  font-weight: 700;
+  font-size: var(--text-base);
+}
+
+.day-accordion__subtitle {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.day-accordion__chevron {
+  transition: transform 0.2s ease;
+  color: var(--text-secondary);
+}
+
+.day-accordion.is-open .day-accordion__chevron {
+  transform: rotate(180deg);
+}
+
+.day-accordion__body {
+  padding: 0 var(--space-4) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.day-accordion__body[hidden] {
+  display: none;
+}
+
+.day-accordion__raw {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+/* ---- lista de ejercicios dentro del día ---- */
+.exercise-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-3);
+  background: var(--surface-secondary);
+  border: none;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  min-height: 48px;
+  cursor: pointer;
+}
+
+.exercise-row__label {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+.exercise-row__detail {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.exercise-row:not(.is-clickable) {
+  cursor: default;
+}
+
+.day-accordion__complete {
+  margin-top: var(--space-2);
+}
+
+/* ---- bottom sheet ---- */
+.sheet-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(36, 24, 20, 0.4);
+  z-index: 30;
+  display: flex;
+  align-items: flex-end;
+}
+
+.sheet-backdrop[hidden] {
+  display: none;
+}
+
+.sheet {
+  background: var(--surface);
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  padding: var(--space-5);
+  padding-bottom: calc(var(--space-5) + env(safe-area-inset-bottom, 0));
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-height: 85vh;
+  overflow-y: auto;
+  animation: sheet-in 0.2s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sheet {
+    animation: none;
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    transform: translateY(16px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.sheet__close {
+  align-self: flex-end;
+  background: var(--surface-secondary);
+  border: none;
+  border-radius: 999px;
+  width: 40px;
+  height: 40px;
+  font-size: var(--text-base);
+  cursor: pointer;
+}
+
+.sheet__title {
+  font-size: var(--text-xl);
+}
+
+.sheet__field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sheet__field-label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+}
+
+.sheet__field-value {
+  font-size: var(--text-base);
+}
+
+.sheet__caution {
+  background: #fbeceb;
+  color: var(--danger);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+/* ---- secciones genéricas ---- */
+.section-title {
+  font-size: var(--text-xl);
+}
+
+.section-intro {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+}
+
+/* ---- progression ---- */
+.stat-card {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-card__label {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.stat-card__value {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.progress-bar {
+  height: 12px;
+  border-radius: 999px;
+  background: var(--surface-secondary);
+  overflow: hidden;
+}
+
+.progress-bar__fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border);
+  font-size: var(--text-sm);
+}
+
+.history-item:last-child {
+  border-bottom: none;
+}
+
+.log-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.log-form__row {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.log-form__field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.log-form__field label {
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.input {
+  min-height: 48px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 0 var(--space-3);
+  font-size: var(--text-base);
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  width: 100%;
+}
+
+.input:focus,
+.btn:focus-visible,
+.day-accordion__header:focus-visible,
+.exercise-row:focus-visible,
+.week-chip:focus-visible,
+.stage-card:focus-visible,
+.bottom-nav__item:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+textarea.input {
+  min-height: 96px;
+  padding: var(--space-3);
+  resize: vertical;
+  font-family: var(--font-body);
+}
+
+.eval-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.eval-card__title {
+  font-weight: 700;
+}
+
+.eval-row {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.eval-row__label {
+  color: var(--text-secondary);
+}
+
+/* ---- notas ---- */
+.note-item {
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.note-item__meta {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.note-item__text {
+  font-size: var(--text-base);
+}
+
+.empty-state {
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  text-align: center;
+  padding: var(--space-5) 0;
+}
+
+/* ---- nutrición ---- */
+.nutrition-note {
+  background: var(--surface-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+
+.nutrition-category {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.nutrition-category__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  min-height: 56px;
+}
+
+.nutrition-category__icon {
+  font-size: 24px;
+}
+
+.nutrition-category__titles {
+  flex: 1;
+}
+
+.nutrition-category__title {
+  font-weight: 700;
+}
+
+.nutrition-category__subtitle {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.nutrition-category__body {
+  padding: 0 var(--space-4) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.nutrition-category__body[hidden] {
+  display: none;
+}
+
+.nutrition-item {
+  padding: var(--space-3);
+  background: var(--surface-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.nutrition-item__name {
+  font-weight: 700;
+  font-size: var(--text-sm);
+}
+
+.nutrition-item__note {
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
+
+.safety-note {
+  background: var(--surface-secondary);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  font-size: var(--text-xs);
+  color: var(--text-secondary);
+}
